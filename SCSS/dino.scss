@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'burguer';
+@import 'carousel';
+@import 'categories';
+@import 'contacForm';
+@import 'footer';
+@import 'header';
+@import 'searchbar';
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .bg-red-dino {
+    background-color: $red-dino !important;
+  }
+  
+  .bg-carousel-dino {
+    background-color: $grey-carousel-dino;
+  }
+  
+  .bg-earphones-dino {
+    background-color: $darck-grey-dino;
+  }
+  
+  .bg-smartwatch-dino {
+    background-color: $yellow-dino;
+  }
+  
+  .bg-phones-dino {
+    background-color: $green-dino;
+  }
+  
+  .rounded-dino {
+    border-radius: 20px;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: $grey-dino;
+  }
+  
+  main {
+    margin-top: 11vh;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    transition: 1s; 
+  }
+  

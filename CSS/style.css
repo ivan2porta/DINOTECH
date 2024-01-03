@@ -1,0 +1,473 @@
+ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+ul a {
+  text-decoration: none;
+}
+ul li {
+  text-align: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+ul li#login, ul li#signup {
+  border-radius: 5px;
+}
+ul li:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+#hamburguer-icon {
+  display: none;
+  margin: auto 0px;
+  cursor: pointer;
+}
+#hamburguer-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu {
+  background-color: #e8e9ea;
+  border: solid 1px black;
+  border-top: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: none;
+  position: fixed;
+  top: 45px;
+  left: 0px;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-h {
+  font-size: 13vh;
+  font-weight: bold;
+}
+
+.carousel-h2 {
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+.carousel-h3 {
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.carousel-img {
+  height: 400px;
+  opacity: 80%;
+}
+
+@media (width < 768px) {
+  .carousel-h {
+    font-size: 5vh;
+  }
+  .carousel-img {
+    height: 150px;
+    margin-top: 20px;
+  }
+}
+.carousel-item {
+  width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-h {
+  font-size: 13vh;
+  font-weight: bold;
+}
+
+.carousel-h2 {
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+.carousel-h3 {
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.carousel-img {
+  height: 400px;
+  opacity: 80%;
+}
+
+@media (max-width: 768px) {
+  .carousel-h {
+    font-size: 5vh;
+  }
+  .carousel-img {
+    height: 150px;
+    margin-top: 20px;
+  }
+}
+.categories {
+  margin: auto;
+  display: grid;
+  gap: 2rem;
+  min-width: 100%;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 45vh 45vh;
+  grid-template-areas: "earphones smartwatch laptop" "console console smartphone";
+}
+
+.earphones {
+  grid-area: earphones;
+  background-image: url("../img/earphones2.png");
+  background-repeat: no-repeat;
+  background-position: 10rem center;
+}
+
+.smartwatch {
+  grid-area: smartwatch;
+  background-image: url("../img/smartwatch2.png");
+  background-repeat: no-repeat;
+  background-position: 10rem center;
+}
+
+.laptop {
+  grid-area: laptop;
+  background-image: url("../img/laptop2.png");
+  background-repeat: no-repeat;
+  background-position: 9rem center;
+}
+
+.console {
+  grid-area: console;
+  background-image: url("../img/console2.png");
+  background-repeat: no-repeat;
+  background-position: 20rem center;
+}
+
+.smartphone {
+  grid-area: smartphone;
+  background-image: url("../img/smartphone2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.category-item {
+  height: 200px;
+}
+
+@media (width < 768px) {
+  main {
+    margin-top: 6vh;
+  }
+  .categories {
+    display: flex;
+    flex-direction: column;
+  }
+  .earphones,
+  .laptop,
+  .console,
+  .smartphone,
+  .smartwatch {
+    padding: 2rem;
+  }
+  .earphones,
+  .smartwatch {
+    background-position: 17rem center;
+  }
+  .laptop {
+    background-position: 15rem center;
+  }
+  .console {
+    background-position: 15rem center;
+    background-size: 50% 70%;
+  }
+  .smartphone {
+    background-position: 10rem -1rem;
+    background-size: 70% 100%;
+  }
+}
+@media (width < 576px) {
+  .categories {
+    display: grid;
+    gap: 0.5rem;
+    max-width: 200px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 20vh 20vh;
+    grid-template-areas: "earphones smartwatch" "laptop smartphone" "console console";
+  }
+  .earphones,
+  .laptop,
+  .console,
+  .smartphone,
+  .smartwatch {
+    padding: 0;
+  }
+  .earphones,
+  .smartwatch,
+  .laptop {
+    background-position: center;
+    background-size: 50% 70%;
+  }
+  .console {
+    background-position: 12rem center;
+    background-size: 35% 70%;
+  }
+  .smartphone {
+    background-position: center -1rem;
+    background-size: 100% 100%;
+  }
+}
+.table-container {
+  display: table;
+  padding: 0px 4rem 4rem 4rem;
+}
+
+.table-row {
+  display: table-row;
+  margin-top: 20px;
+}
+
+.table-column {
+  display: table-cell;
+  padding: 0px 5px 5px 5px;
+  align-items: start;
+}
+
+.table-column > input[type=text],
+.table-column > input[type=email],
+.table-column > input[type=tel],
+.table-column > input[type=number],
+.table-column > textarea {
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px black;
+  margin: 15px;
+}
+
+input[type=reset],
+input[type=submit] {
+  border: none;
+  min-width: 100px;
+}
+
+.social-media > a > svg:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+@media (width < 768px) {
+  .table-container {
+    padding: 0px 1rem 1rem 1rem;
+  }
+  textarea {
+    height: 20vh;
+  }
+}
+@media (width < 576px) {
+  .table-container {
+    display: block;
+  }
+  .form-container {
+    display: block;
+    margin: 30px;
+  }
+  .column {
+    display: block;
+    width: 100%;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+.footer-img {
+  height: 10vh;
+}
+
+.footer1 {
+  background-image: linear-gradient(transparent 50%, #df2128 50%);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #e8e9ea;
+  z-index: 4;
+  top: 0;
+  padding: 0px;
+}
+
+@media (width < 768px) {
+  header #hamburguer-icon {
+    display: block;
+  }
+  header .icon {
+    width: 22px;
+  }
+}
+.cd__main {
+  background: linear-gradient(to right, #4e54c8, #8f94fb) !important;
+  align-items: center;
+  flex-direction: column !important;
+}
+
+.button {
+  display: inline-block;
+  margin: 4px 2px;
+  font-size: 14px;
+  padding-left: 32px;
+  padding-right: 32px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button:hover {
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  color: black;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+  margin: 4px 2px;
+  height: 50px;
+  width: 50px;
+  vertical-align: bottom;
+}
+
+.searchbutton {
+  position: absolute;
+  font-size: 22px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search:focus + .searchbutton {
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+}
+
+.search {
+  position: absolute;
+  left: 49px;
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 0;
+  height: 100%;
+  z-index: 10;
+  transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+}
+
+.search:focus {
+  width: 200px;
+  padding: 0 16px 0 0;
+  border-radius: 5px;
+}
+
+.expandright {
+  left: auto;
+  right: 49px;
+}
+
+.expandright:focus {
+  padding: 0 0 0 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-red-dino {
+  background-color: #df2128 !important;
+}
+
+.bg-carousel-dino {
+  background-color: #b3b3b3;
+}
+
+.bg-earphones-dino {
+  background-color: #212121;
+}
+
+.bg-smartwatch-dino {
+  background-color: #f4be2b;
+}
+
+.bg-phones-dino {
+  background-color: #2cc86c;
+}
+
+.rounded-dino {
+  border-radius: 20px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #e8e9ea;
+}
+
+main {
+  margin-top: 11vh;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+/*# sourceMappingURL=style.css.map */

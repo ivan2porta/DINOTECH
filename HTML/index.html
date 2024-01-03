@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dinotech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="../JS/functions.js"></script>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+  <header class="ps-3 pe-3">
+    <nav class="d-flex d-md-block justify-content-between">
+      <div id="hamburguer-icon" onclick=toogleMobileMenu(this)>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="./index.html" class="text-black fs-1">Home</a></li>
+          <li><a href="#" class="text-black fs-1">Categories</a></li>
+          <li><a href="#" class="text-black fs-1">About Us</a></li>
+          <li><a href="./contactus.html" class="text-black fs-1">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <form class="d-block d-md-none col-7 col-lg-auto mb-lg-0 me-lg-3 align-self-center" role="search">
+        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+      </form>
+
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul
+          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center align-items-center mb-md-0 d-none d-md-flex">
+          <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px"></h1>
+          <li><a href="./index.html" class="nav-link px-2 fs-5 text-black">Home</a></li>
+          <li><a href="#" class="nav-link px-2 fs-5 text-black">Categories</a></li>
+          <li><a href="#" class="nav-link px-2 fs-5 text-black">About Us</a></li>
+          <li><a href="./contactus.html" class="nav-link px-2 fs-5 text-black">Contact Us</a></li>
+        </ul>
+
+
+
+        <div class="search-container d-none d-md-block">
+          <form action="#" method="get">
+            <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+            <label class="button searchbutton" for="searchright">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-search search-icon icon" viewbox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg>
+            </label>
+          </form>
+        </div>
+
+        <div class="text-end">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person icon"
+              viewbox="0 0 16 16">
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" />
+            </svg>
+          </button>
+          <button type="button" class="btn ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-basket icon"
+              viewbox="0 0 16 16">
+              <path
+                d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 bg-red-dino text-white" type="submit">Sign up</button>
+            <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+            <hr class="my-4">
+            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16">
+                <use xlink:href="#twitter" />
+              </svg>
+              Sign up with Twitter
+            </button>
+            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16">
+                <use xlink:href="#facebook" />
+              </svg>
+              Sign up with Facebook
+            </button>
+            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16">
+                <use xlink:href="#github" />
+              </svg>
+              Sign up with GitHub
+            </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn bg-red-dino text-white">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="main-container" class="container">
+    <main class=" d-flex flex-column align-items-center">
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+
+
+        <div class="carousel-inner rounded-dino">
+          <div class="carousel-item active bg-carousel-dino">
+            <div class="row">
+              <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
+                <p>
+                <h3 class="carousel-h3 mb-0">Beats Solo</h3>
+                <h2 class="carousel-h2 mb-0">Wireless</h2>
+                <h1 class="carousel-h mb-0">HEADPHONES</h1>
+                </p>
+                <div class="mb-3 d-flex justify-content-center">
+                  <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
+                </div>
+              </div>
+              <div class="col-4">
+                <img src="../img/headphone.png" alt="#" class="carousel-img">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item bg-carousel-dino">
+            <div class="row">
+              <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
+                <p>
+                <h3 class="carousel-h3 mb-0">Portability</h3>
+                <h2 class="carousel-h2 mb-0">Performance</h2>
+                <h1 class="carousel-h mb-0">CHROMEBOOKS</h1>
+                </p>
+                <div class="mb-3 d-flex justify-content-start">
+                  <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
+                </div>
+              </div>
+              <div class="col-4">
+                <img src="../img/chromebook.png" alt="#" class="carousel-img">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item bg-carousel-dino">
+            <div class="row">
+              <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
+                <p>
+                <h3 class="carousel-h3 mb-0">Discover</h3>
+                <h2 class="carousel-h2 mb-0">Explore</h2>
+                <h1 class="carousel-h mb-0">SMARTPHONES</h1>
+                </p>
+                <div class="mb-3 d-flex justify-content-start">
+                  <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
+                </div>
+              </div>
+              <div class="col-4">
+                <img src="../img/smartphone.jpg" alt="#" class="carousel-img">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">siguiente</span>
+        </button>
+        <div id="myCarouselPhone" class="carousel slide" data-bs-ride="carousel" style="z-index: 3;">
+          <span data-bs-target="#myCarousel" data-bs-slide-to="0" class="indicator active"></span>
+          <span data-bs-target="#myCarousel" data-bs-slide-to="1" class="indicator"></span>
+          <span data-bs-target="#myCarousel" data-bs-slide-to="2" class="indicator"></span>
+        </div>
+      </div>
+
+      <div class="container brands fw-bold mt-3 d-md-none">
+        <div class="d-flex justify-content-between mb-2">
+          <div class="col-auto"><span>Choose your brand</span></div>
+          <div class="col-auto"><span class="text-secondary" id="display-hide" onclick="displayHide()">See
+              more brands</span></div>
+        </div>
+
+        <div class="d-flex justify-content-evenly">
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/beats.png" alt="#">
+            <span class="fw-bold">Beats</span>
+          </div>
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/jbl.png" alt="#">
+            <span class="fw-bold">JBL</span>
+          </div>
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/apple.png" alt="#">
+            <span class="fw-bold">Apple</span>
+          </div>
+        </div>
+
+        <div class="brands-div d-none justify-content-evenly">
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/asus.png" alt="#">
+            <span class="fw-bold">Asus</span>
+          </div>
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/google.png" alt="#">
+            <span class="fw-bold">Google</span>
+          </div>
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/samsung.png" alt="#">
+            <span class="fw-bold">Samsung</span>
+          </div>
+        </div>
+
+        <div class="brands-div d-none justify-content-evenly">
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/xiaomi.png" alt="#">
+            <span class="fw-bold">Xiaomi</span>
+          </div>
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/hp.png" alt="#">
+            <span class="fw-bold">HP</span>
+          </div>
+          <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
+            <img src="../img/brands/sony.png" alt="#">
+            <span class="fw-bold">Sony</span>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="categories  mt-4">
+
+        <div
+          class="earphones bg-earphones-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
+          <div class="container text-light d-flex  flex-column justify-content-end align-items-xs-center ms-sm-4">
+            <p>
+              <span class="fs-3 d-none d-sm-block">Enjoy</span><br>
+              <span class="fs-1 d-none d-sm-block"><strong>With</strong></span><br>
+              <span class="fs-3"><strong>EARPHONES</strong></span>
+            </p>
+            <a class="btn btn-lg bg-red-dino text-light rounded-pill align-self-start d-none d-sm-block"
+              href="#">Browse</a>
+          </div>
+        </div>
+
+        <div
+          class="smartwatch bg-smartwatch-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
+          <div class="container text-light d-flex flex-column justify-content-end align-items-xs-center ms-sm-4">
+            <p>
+              <span class="fs-3 d-none d-sm-block">Smart</span><br>
+              <span class="fs-2 d-none d-sm-block"><strong>With</strong></span><br>
+              <span class="text-light fs-3"><strong>SMARTWATCH</strong></span>
+            </p>
+            <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
+              href="#">Browse</a>
+          </div>
+        </div>
+
+        <div
+          class="laptop bg-red-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
+          <div class="container text-light d-flex  flex-column justify-content-end align-items-xs-center ms-sm-4">
+            <p>
+              <span class="fs-3 d-none d-sm-block">Power</span><br>
+              <span class="fs-1 d-none d-sm-block"><strong>With</strong></span><br>
+              <span class="text-dark-emphasis fs-3"><strong>LAPTOPS</strong></span>
+            </p>
+            <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
+              href="#">Browse</a>
+          </div>
+        </div>
+
+        <div
+          class="console bg-carousel-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
+          <div class="container text-light d-flex  flex-column justify-content-end align-items-xs-center ms-sm-4">
+            <p>
+              <span class="text-black fs-3 d-none d-sm-block">Game on</span><br>
+              <span class="text-black fs-1 d-none d-sm-block"><strong>With</strong></span><br>
+              <span class="text-light fs-1"><strong>CONSOLES</strong></span>
+            </p>
+            <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
+              href="#">Browse</a>
+          </div>
+        </div>
+
+        <div
+          class="smartphone bg-phones-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
+          <div class="container text-light d-flex  flex-column justify-content-end align-items-xs-center ms-sm-4">
+            <p>
+              <span class="text-light fs-3 d-none d-sm-block">Contact</span><br>
+              <span class="text-light fs-1 d-none d-sm-block"><strong>With</strong></span><br>
+              <span class="text-black fs-3"><strong>PHONES</strong></span>
+            </p>
+            <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
+              href="#">Browse</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="icons d-none d-sm-flex mt-5 justify-content-evenly">
+
+        <div class="icon icon-text d-flex flex-column align-items-center ms-5 me-5" data-bs-toggle="modal"
+          data-bs-target="#modalFreeShipping">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-truck"
+            viewbox="0 0 16 16">
+            <path
+              d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+          </svg>
+          <p class="justify-content-center">FREE SHIPPING</p>
+        </div>
+
+        <div class="modal fade" id="modalFreeShipping" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalFreeShippingTitle">FREE SHIPPING</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-truck"
+                  viewbox="0 0 16 16">
+                  <path
+                    d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Experience the convenience of effortless shopping with our commitment to free shipping on all orders.
+                  Enjoy the luxury of having your purchases delivered straight to your doorstep without any additional
+                  shipping charges. From small essentials to large buys, our free shipping policy ensures a seamless
+                  shopping experience, saving you both time and money.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="icon icon-text d-flex flex-column align-items-center ms-5 me-5" data-bs-toggle="modal"
+        data-bs-target="#modalEasyRefund">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-wallet2"
+            viewbox="0 0 16 16">
+            <path
+              d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
+          </svg>
+          <p>EASY REFUND</p>
+        </div>
+
+        <div class="modal fade" id="modalEasyRefund" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalEasyRefundTitle">EASY REFUND</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-wallet2"
+            viewbox="0 0 16 16">
+            <path
+              d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
+          </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Your satisfaction is our priority, which is why we offer an easy and straightforward return process. 
+                  If for any reason you're not completely satisfied with your purchase, we've got you covered. Our hassle-free 
+                  return policy ensures that returning or exchanging items is a smooth and stress-free experience. Shop 
+                  confidently knowing that your happiness with our products is guaranteed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="icon icon-text d-flex flex-column align-items-center ms-5 me-5" data-bs-toggle="modal"
+        data-bs-target="#modalSafePayment">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+            class="bi bi-credit-card-2-back" viewbox="0 0 16 16">
+            <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z" />
+            <path
+              d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1m-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1" />
+          </svg>
+          <p>SAFE PAYMENT</p>
+        </div>
+
+        <div class="modal fade" id="modalSafePayment" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalSafePaymentTitle">FREE SHIPPING</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+            class="bi bi-credit-card-2-back" viewbox="0 0 16 16">
+            <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z" />
+            <path
+              d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1m-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1" />
+          </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>We prioritize your security when it comes to payments. Our platform ensures a safe and protected environment 
+                  for all your transactions. With encrypted and reliable payment methods, you can shop with peace of mind, knowing 
+                  that your sensitive information is safeguarded. Trust in our commitment to providing you with a secure payment process.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="icon icon-text d-flex flex-column align-items-center ms-5 me-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-check-circle"
+            viewbox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+            <path
+              d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+          </svg>
+          <p>2 YEAR GUARANTEE</p>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalGuarantee" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalGuaranteeTitle">FREE SHIPPING</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle"
+            viewbox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+            <path
+              d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+          </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>We stand behind the quality and durability of our products. That's why we proudly offer a comprehensive 2-year 
+                  guarantee on all our items. This assurance underscores our commitment to delivering high-quality goods that you 
+                  can rely on. Our two-year warranty ensures that your purchase is protected, providing you with added confidence 
+                  and reassurance in your decision to shop with us.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </main>
+  </div>
+
+  <footer class="mt-2 mt-sm-5">
+    <div class="footer1 d-flex justify-content-center">
+      <img src="../img/dinotech_black_logo.png" alt="#" class="footer-img">
+    </div>
+
+    <div class="footer2 bg-black text-light">
+      <div class="container d-flex justify-content-between py-4 flex-column flex-sm-row">
+        <section class="d-flex flex-column align-items-center m-3 m-sm-0">
+          <h3>PRODUCT</h3>
+          <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
+            <br> Lorem ipsum <br> Lorem
+            ipsum <br> Lorem ipsum
+          </p>
+        </section>
+        <section class="d-flex flex-column align-items-center m-3 m-sm-0">
+          <h3>COMPANY</h3>
+          <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
+            <br> Lorem ipsum <br> Lorem
+            ipsum <br> Lorem ipsum
+          </p>
+        </section>
+        <section class="d-flex flex-column align-items-center m-3 m-sm-0">
+          <h3>HELP</h3>
+          <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
+            <br> Lorem ipsum <br> Lorem
+            ipsum <br> Lorem ipsum
+          </p>
+        </section>
+        <section class="d-flex flex-column align-items-center m-3 m-sm-0">
+          <h3>ABOUT US</h3>
+          <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
+            <br> Lorem ipsum <br> Lorem
+            ipsum <br> Lorem ipsum
+          </p>
+        </section>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
