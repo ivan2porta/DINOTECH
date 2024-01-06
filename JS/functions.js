@@ -4,15 +4,16 @@ function toogleMobileMenu(element) {
 }
 
 function displayHide() {
-    const hiddenDivs = document.querySelectorAll('.brands-div');
-    hiddenDivs.forEach(div => {
+  const hiddenDivs = document.querySelectorAll('.brands-div');
+  hiddenDivs.forEach(div => {
       div.classList.toggle('d-none');
       div.classList.toggle('d-flex');
-    });
+  });
 
-    if (document.getElementById("display-hide").textContent == "See more brands") {
-      document.getElementById("display-hide").textContent = "Hide brands";
-    } else {
-      document.getElementById("display-hide").textContent = "See more brands";
-    }
+  const button = document.getElementById("display-hide");
+  if (button.textContent === "See more brands") {
+      button.textContent = "Hide brands";
+  } else {
+      button.textContent = "See more brands";
+  }
 }

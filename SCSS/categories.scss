@@ -1,3 +1,7 @@
+main {
+  margin-top: 11vh;
+}
+
 .categories {
     margin: auto;
     display: grid;
@@ -51,6 +55,7 @@
   .category-item {
     height: 200px;
   }
+
 
   @media (width < 768px) {
 
