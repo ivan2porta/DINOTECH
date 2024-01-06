@@ -31,7 +31,7 @@
 
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <ul
-          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center align-items-center mb-md-0 d-none d-md-flex">
+          class="nav col-9 col-lg-auto me-lg-auto mb-2 justify-content-start align-items-center mb-md-0 d-none d-md-flex">
           <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px"></h1>
           <li><a href="./index.html" class="nav-link px-2 fs-5 text-black">Home</a></li>
           <li><a href="#" class="nav-link px-2 fs-5 text-black">Categories</a></li>
@@ -41,7 +41,7 @@
 
 
 
-        <div class="search-container d-none d-md-block">
+        <div class="search-container d-none d-lg-block">
           <form action="#" method="get">
             <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
             <label class="button searchbutton" for="searchright">
@@ -55,12 +55,12 @@
         </div>
 
         <div class="text-end">
-          <button type="button" class="btn d-md-none" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+          <button type="button" class="btn d-lg-none" data-bs-toggle="modal" data-bs-target="#exampleModal2">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                class="bi bi-search search-icon icon" viewbox="0 0 16 16">
-                <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-              </svg>
+              class="bi bi-search search-icon icon" viewbox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
           </button>
 
           <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -153,88 +153,91 @@
 
   <div id="main-container" class="container">
     <main class=" d-flex flex-column align-items-center">
-      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+      <div class="container-fluid">
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
 
 
 
-        <div class="carousel-inner rounded-dino">
-          <div class="carousel-item active bg-carousel-dino">
-            <div class="row">
-              <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
-                <p>
-                <h3 class="carousel-h3 mb-0">Beats Solo</h3>
-                <h2 class="carousel-h2 mb-0">Wireless</h2>
-                <h1 class="carousel-h mb-0">HEADPHONES</h1>
-                </p>
-                <div class="mb-3 d-flex justify-content-center">
-                  <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
+          <div class="carousel-inner rounded-dino mt-md-5 mt-lg-0">
+            <div class="carousel-item active bg-carousel-dino">
+              <div class="row">
+                <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
+                  <p>
+                  <p class="carousel-h3 mb-0">Beats Solo</p>
+                  <p class="carousel-h2 mb-0">Wireless</p>
+                  <p class="carousel-h mb-0">HEADPHONES</p>
+                  </p>
+                  <div class="mb-3 d-flex justify-content-center">
+                    <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <img src="../img/headphone.png" alt="#" class="carousel-img">
                 </div>
               </div>
-              <div class="col-4">
-                <img src="../img/headphone.png" alt="#" class="carousel-img">
+            </div>
+            <div class="carousel-item bg-carousel-dino">
+              <div class="row">
+                <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
+                  <p>
+                  <p class="carousel-h3 mb-0">Portability</p>
+                  <p class="carousel-h2 mb-0">Performance</p>
+                  <p class="carousel-h mb-0">CHROMEBOOKS</p>
+                  </p>
+                  <div class="mb-3 d-flex justify-content-start">
+                    <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <img src="../img/chromebook.png" alt="#" class="carousel-img">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item bg-carousel-dino">
+              <div class="row">
+                <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
+                  <p>
+                  <p class="carousel-h3 mb-0">Discover</p>
+                  <p class="carousel-h2 mb-0">Explore</p>
+                  <p class="carousel-h mb-0">SMARTPHONES</p>
+                  </p>
+                  <div class="mb-3 d-flex justify-content-start">
+                    <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <img src="../img/smartphone.jpg" alt="#" class="carousel-img">
+                </div>
               </div>
             </div>
           </div>
-          <div class="carousel-item bg-carousel-dino">
-            <div class="row">
-              <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
-                <p>
-                <h3 class="carousel-h3 mb-0">Portability</h3>
-                <h2 class="carousel-h2 mb-0">Performance</h2>
-                <h1 class="carousel-h mb-0">CHROMEBOOKS</h1>
-                </p>
-                <div class="mb-3 d-flex justify-content-start">
-                  <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
-                </div>
-              </div>
-              <div class="col-4">
-                <img src="../img/chromebook.png" alt="#" class="carousel-img">
-              </div>
-            </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">siguiente</span>
+          </button>
+          <div id="myCarouselPhone" class="carousel slide" data-bs-ride="carousel" style="z-index: 3;">
+            <span data-bs-target="#myCarousel" data-bs-slide-to="0" class="indicator active"></span>
+            <span data-bs-target="#myCarousel" data-bs-slide-to="1" class="indicator"></span>
+            <span data-bs-target="#myCarousel" data-bs-slide-to="2" class="indicator"></span>
           </div>
-          <div class="carousel-item bg-carousel-dino">
-            <div class="row">
-              <div class="container pl-4 col-7 offset-1 d-flex flex-column align-items-start justify-content-center">
-                <p>
-                <h3 class="carousel-h3 mb-0">Discover</h3>
-                <h2 class="carousel-h2 mb-0">Explore</h2>
-                <h1 class="carousel-h mb-0">SMARTPHONES</h1>
-                </p>
-                <div class="mb-3 d-flex justify-content-start">
-                  <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
-                </div>
-              </div>
-              <div class="col-4">
-                <img src="../img/smartphone.jpg" alt="#" class="carousel-img">
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">siguiente</span>
-        </button>
-        <div id="myCarouselPhone" class="carousel slide" data-bs-ride="carousel" style="z-index: 3;">
-          <span data-bs-target="#myCarousel" data-bs-slide-to="0" class="indicator active"></span>
-          <span data-bs-target="#myCarousel" data-bs-slide-to="1" class="indicator"></span>
-          <span data-bs-target="#myCarousel" data-bs-slide-to="2" class="indicator"></span>
         </div>
       </div>
 
       <div class="container brands fw-bold mt-3 d-md-none">
         <div class="d-flex justify-content-between mb-2">
           <div class="col-auto"><span>Choose your brand</span></div>
-          <div class="col-auto"><span class="text-secondary" id="display-hide" onclick="displayHide()">See more brands</span></div>
+          <div class="col-auto"><span class="text-secondary" id="display-hide" onclick="displayHide()">See more
+              brands</span></div>
         </div>
 
         <div class="d-flex justify-content-evenly">
@@ -294,7 +297,7 @@
             <p>
               <span class="fs-3 d-none d-sm-block">Enjoy</span><br>
               <span class="fs-1 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="fs-3"><strong>EARPHONES</strong></span>
+              <span class="fs-3 category-title"><strong>EARPHONES</strong></span>
             </p>
             <a class="btn btn-lg bg-red-dino text-light rounded-pill align-self-start d-none d-sm-block"
               href="#">Browse</a>
@@ -307,7 +310,7 @@
             <p>
               <span class="fs-3 d-none d-sm-block">Smart</span><br>
               <span class="fs-2 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="text-light fs-3"><strong>SMARTWATCH</strong></span>
+              <span class="text-light fs-3 category-title"><strong>SMARTWATCH</strong></span>
             </p>
             <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
               href="#">Browse</a>
@@ -320,7 +323,7 @@
             <p>
               <span class="fs-3 d-none d-sm-block">Power</span><br>
               <span class="fs-1 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="text-dark-emphasis fs-3"><strong>LAPTOPS</strong></span>
+              <span class="text-dark-emphasis fs-3 category-title"><strong>LAPTOPS</strong></span>
             </p>
             <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
               href="#">Browse</a>
@@ -333,7 +336,7 @@
             <p>
               <span class="text-black fs-3 d-none d-sm-block">Game on</span><br>
               <span class="text-black fs-1 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="text-light fs-1"><strong>CONSOLES</strong></span>
+              <span class="text-light fs-1 category-title"><strong>CONSOLES</strong></span>
             </p>
             <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
               href="#">Browse</a>
@@ -346,7 +349,7 @@
             <p>
               <span class="text-light fs-3 d-none d-sm-block">Contact</span><br>
               <span class="text-light fs-1 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="text-black fs-3"><strong>PHONES</strong></span>
+              <span class="text-black fs-3 category-title"><strong>PHONES</strong></span>
             </p>
             <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
               href="#">Browse</a>
@@ -391,7 +394,7 @@
 
 
         <div class="icon icon-text d-flex flex-column align-items-center ms-5 me-5" data-bs-toggle="modal"
-        data-bs-target="#modalEasyRefund">
+          data-bs-target="#modalEasyRefund">
           <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-wallet2"
             viewbox="0 0 16 16">
             <path
@@ -407,16 +410,17 @@
               <div class="modal-header">
                 <h1 class="modal-title fs-5 me-3" id="modalEasyRefundTitle">EASY REFUND</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-wallet2"
-            viewbox="0 0 16 16">
-            <path
-              d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
-          </svg>
+                  viewbox="0 0 16 16">
+                  <path
+                    d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
+                </svg>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <p>Your satisfaction is our priority, which is why we offer an easy and straightforward return process. 
-                  If for any reason you're not completely satisfied with your purchase, we've got you covered. Our hassle-free 
-                  return policy ensures that returning or exchanging items is a smooth and stress-free experience. Shop 
+                <p>Your satisfaction is our priority, which is why we offer an easy and straightforward return process.
+                  If for any reason you're not completely satisfied with your purchase, we've got you covered. Our
+                  hassle-free
+                  return policy ensures that returning or exchanging items is a smooth and stress-free experience. Shop
                   confidently knowing that your happiness with our products is guaranteed.</p>
               </div>
             </div>
@@ -424,7 +428,7 @@
         </div>
 
         <div class="icon icon-text d-flex flex-column align-items-center ms-5 me-5" data-bs-toggle="modal"
-        data-bs-target="#modalSafePayment">
+          data-bs-target="#modalSafePayment">
           <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
             class="bi bi-credit-card-2-back" viewbox="0 0 16 16">
             <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z" />
@@ -441,17 +445,20 @@
               <div class="modal-header">
                 <h1 class="modal-title fs-5 me-3" id="modalSafePaymentTitle">FREE SHIPPING</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-            class="bi bi-credit-card-2-back" viewbox="0 0 16 16">
-            <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z" />
-            <path
-              d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1m-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1" />
-          </svg>
+                  class="bi bi-credit-card-2-back" viewbox="0 0 16 16">
+                  <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z" />
+                  <path
+                    d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1m-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1" />
+                </svg>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <p>We prioritize your security when it comes to payments. Our platform ensures a safe and protected environment 
-                  for all your transactions. With encrypted and reliable payment methods, you can shop with peace of mind, knowing 
-                  that your sensitive information is safeguarded. Trust in our commitment to providing you with a secure payment process.</p>
+                <p>We prioritize your security when it comes to payments. Our platform ensures a safe and protected
+                  environment
+                  for all your transactions. With encrypted and reliable payment methods, you can shop with peace of
+                  mind, knowing
+                  that your sensitive information is safeguarded. Trust in our commitment to providing you with a secure
+                  payment process.</p>
               </div>
             </div>
           </div>
@@ -468,29 +475,31 @@
         </div>
       </div>
 
-      <div class="modal fade" id="modalGuarantee" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5 me-3" id="modalGuaranteeTitle">FREE SHIPPING</h1>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-check-circle"
-            viewbox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-            <path
-              d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
-          </svg>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p>We stand behind the quality and durability of our products. That's why we proudly offer a comprehensive 2-year 
-                  guarantee on all our items. This assurance underscores our commitment to delivering high-quality goods that you 
-                  can rely on. Our two-year warranty ensures that your purchase is protected, providing you with added confidence 
-                  and reassurance in your decision to shop with us.</p>
-              </div>
+      <div class="modal fade" id="modalGuarantee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 me-3" id="modalGuaranteeTitle">FREE SHIPPING</h1>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-check-circle" viewbox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                <path
+                  d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+              </svg>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>We stand behind the quality and durability of our products. That's why we proudly offer a comprehensive
+                2-year
+                guarantee on all our items. This assurance underscores our commitment to delivering high-quality goods
+                that you
+                can rely on. Our two-year warranty ensures that your purchase is protected, providing you with added
+                confidence
+                and reassurance in your decision to shop with us.</p>
             </div>
           </div>
         </div>
+      </div>
 
     </main>
   </div>

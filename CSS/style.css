@@ -59,7 +59,7 @@ ul li:hover {
   top: 45px;
   left: 0px;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: auto;
 }
 
 .carousel-item {
@@ -91,45 +91,12 @@ ul li:hover {
   opacity: 80%;
 }
 
-@media (width < 768px) {
+@media (width < 1200px) {
   .carousel-h {
-    font-size: 5vh;
-  }
-  .carousel-img {
-    height: 150px;
-    margin-top: 20px;
+    font-size: 6vh;
   }
 }
-.carousel-item {
-  width: 100%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
-
-.carousel-h {
-  font-size: 13vh;
-  font-weight: bold;
-}
-
-.carousel-h2 {
-  font-size: 5vh;
-  font-weight: bold;
-}
-
-.carousel-h3 {
-  font-size: 3vh;
-  font-weight: bold;
-}
-
-.carousel-img {
-  height: 400px;
-  opacity: 80%;
-}
-
-@media (max-width: 768px) {
+@media (width < 768px) {
   .carousel-h {
     font-size: 5vh;
   }
@@ -149,7 +116,7 @@ main {
   min-width: 100%;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 45vh 45vh;
+  grid-template-rows: 20rem 20rem;
   grid-template-areas: "earphones smartwatch laptop" "console console smartphone";
 }
 
@@ -192,7 +159,24 @@ main {
   height: 200px;
 }
 
-@media (width < 768px) {
+@media (width < 1200px) {
+  .earphones,
+  .smartwatch {
+    background-position: 9rem center;
+  }
+  .laptop {
+    background-position: 9rem center;
+  }
+  .console {
+    background-position: 17rem center;
+    background-size: 40% 70%;
+  }
+  .smartphone {
+    background-position: 5rem -1rem;
+    background-size: 80% 100%;
+  }
+}
+@media (width < 992px) {
   main {
     margin-top: 6vh;
   }
@@ -215,22 +199,25 @@ main {
     background-position: 15rem center;
   }
   .console {
-    background-position: 15rem center;
-    background-size: 50% 70%;
+    background-position: 17rem center;
+    background-size: 35% 70%;
   }
   .smartphone {
     background-position: 10rem -1rem;
-    background-size: 70% 100%;
+    background-size: 50% 100%;
   }
 }
 @media (width < 576px) {
+  main {
+    margin-top: 7vh;
+  }
   .categories {
     display: grid;
     gap: 0.5rem;
     max-width: 200px;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20vh 20vh 20vh;
+    grid-template-rows: 10rem 10rem 10rem;
     grid-template-areas: "earphones smartwatch" "laptop smartphone" "console console";
   }
   .earphones,
@@ -253,6 +240,17 @@ main {
   .smartphone {
     background-position: center -1rem;
     background-size: 100% 100%;
+  }
+}
+@media (width < 406px) {
+  main {
+    margin-top: 8vh;
+  }
+  .category-title {
+    display: none;
+  }
+  .earphones, .smartphone, .smartwatch, .console, .laptop {
+    background-position: center;
   }
 }
 .table-container {
