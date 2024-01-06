@@ -30,10 +30,6 @@
             </ul>
           </div>
     
-          <form class="d-block d-md-none col-7 col-lg-auto mb-lg-0 me-lg-3 align-self-center" role="search">
-            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-          </form>
-    
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <ul
               class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center align-items-center mb-md-0 d-none d-md-flex">
@@ -60,6 +56,14 @@
             </div>
     
             <div class="text-end">
+              <button type="button" class="btn d-md-none" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-search search-icon icon" viewbox="0 0 16 16">
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                  </svg>
+              </button>
+    
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person icon"
                   viewbox="0 0 16 16">
@@ -123,6 +127,24 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               <button type="button" class="btn bg-red-dino text-white">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control rounded-3" id="floatingInput2" placeholder="name@example.com">
+                  <label for="floatingInput">Search...</label>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn bg-red-dino text-white">Search</button>
             </div>
           </div>
         </div>
