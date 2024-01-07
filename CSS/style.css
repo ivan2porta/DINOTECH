@@ -178,7 +178,7 @@ main {
 }
 @media (width < 992px) {
   main {
-    margin-top: 6vh;
+    margin-top: 8rem;
   }
   .categories {
     display: flex;
@@ -209,7 +209,7 @@ main {
 }
 @media (width < 576px) {
   main {
-    margin-top: 7vh;
+    margin-top: 3rem;
   }
   .categories {
     display: grid;
