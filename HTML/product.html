@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-xwX5T4xayPZF6Mno+4tNUC6ndM7P6+e63LCfIBlre56XZ7JQutOvL4k7yN2vYMTimC4me6+mj4Gqiccv1YkLgg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/product.css">
+</head>
+
+<body>
+  <script>
+    function toogleMobileMenu(element) {
+      element.classList.toggle("open");
+    }
+
+    function displayHide() {
+      const hiddenDivs = document.querySelectorAll('.brands-div');
+      hiddenDivs.forEach(div => {
+        div.classList.toggle('d-none');
+        div.classList.toggle('d-flex');
+      });
+
+      if (document.getElementById("display-hide").textContent == "See all") {
+        document.getElementById("display-hide").textContent = "Hide brands";
+      } else {
+        document.getElementById("display-hide").textContent = "See all";
+      }
+    }
+
+  </script>
+  <header class="ps-3 pe-3">
+    <nav class="d-flex d-md-block justify-content-between">
+      <div id="hamburguer-icon" onclick=toogleMobileMenu(this)>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="./index.html" class="text-black fs-1">Home</a></li>
+          <li><a href="#" class="text-black fs-1">Categories</a></li>
+          <li><a href="#" class="text-black fs-1">About Us</a></li>
+          <li><a href="./contactus.html" class="text-black fs-1">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul
+          class="nav col-9 col-lg-auto me-lg-auto mb-2 justify-content-start align-items-center mb-md-0 d-none d-md-flex">
+          <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px"></h1>
+          <li><a href="./index.html" class="nav-link px-2 fs-5 text-black">Home</a></li>
+          <li><a href="#" class="nav-link px-2 fs-5 text-black">Categories</a></li>
+          <li><a href="#" class="nav-link px-2 fs-5 text-black">About Us</a></li>
+          <li><a href="./contactus.html" class="nav-link px-2 fs-5 text-black">Contact Us</a></li>
+        </ul>
+
+
+
+        <div class="search-container d-none d-lg-block">
+          <form action="#" method="get">
+            <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
+            <label class="button searchbutton" for="searchright">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-search search-icon icon" viewbox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg>
+            </label>
+          </form>
+        </div>
+
+        <div class="text-end">
+          <button type="button" class="btn d-lg-none" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+              class="bi bi-search search-icon icon" viewbox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+          </button>
+
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person icon"
+              viewbox="0 0 16 16">
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z" />
+            </svg>
+          </button>
+          <button type="button" class="btn ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-basket icon"
+              viewbox="0 0 16 16">
+              <path
+                d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 bg-red-dino text-white" type="submit">Sign up</button>
+            <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+            <hr class="my-4">
+            <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16">
+                <use xlink:href="#twitter" />
+              </svg>
+              Sign up with Twitter
+            </button>
+            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16">
+                <use xlink:href="#facebook" />
+              </svg>
+              Sign up with Facebook
+            </button>
+            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+              <svg class="bi me-1" width="16" height="16">
+                <use xlink:href="#github" />
+              </svg>
+              Sign up with GitHub
+            </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn bg-red-dino text-white">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form class="">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control rounded-3" id="floatingInput2" placeholder="name@example.com">
+              <label for="floatingInput">Search...</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-red-dino text-white">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container d-flex rounded-dino bg-earphones-dino justify-content-center mt-5">
+      <div class="offset-md-2 col-6">
+        <img src="../img/sony_headphones2.png" alt="Product Image" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-4 text-light d-flex  flex-column align-items-end me-2 justify-content-evenly">
+        <div class="d-flex justify-content-end">
+          <img src="../img/brands/sony2.png" alt="Sony Logo" class="img-fluid">
+        </div>
+        <p class="text-danger h1 fw-bold m-2">WH-CH710N</p>
+        <p class="text-light h2 fw-bold m-2 d-none d-md-block">Extra Bass</p>
+        <p class="fs-3 text-end m-2 d-none d-md-block">Synchronize the with your device and let the rhythm never stop</p>
+        <p href="#!" class="m-2 d-none d-md-block">
+          <button class="btn bg-red-dino rounded-dino text-light">99.99€ BUY NOW</button>
+        </p>
+      </div>
+    </div>
+
+    <!-- Product section-->
+    <section>
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-start mt-5 align-items-stretch">
+          <div class="col-md-6 d-flex flex-column justify-content-evenly d-none d-md-block">
+
+            <h1 class="display-5 fw-bolder">Product Information</h1>
+            <div class="fs-5">
+
+              <span>Overview</span>
+            </div>
+            <p>Fusce sit amet tincidunt nibh. Sed et magna turpis.
+              Quisque ut ipsum at metus rhturpis.
+              Etiam imperdiet pretium leo, nec maximus nunc efficitur quis.</p>
+            <p>
+              Quisque dapibus a erat eu tempus. Sed elementum rhoncus
+              ex sed pharetra. Nullam rutrum varius interdum.
+              Phasellus tempor placerat urna. Nulla vel euismod tortor.
+              Sed vitae egestas lorem. Morbi eros eros, tincidunt eu massa ac,
+              laoreet posuere ante. Fusce tempus metus felis, a bibendum nunc </p>
+            <div class="d-flex">
+              <button class="btn bg-red-dino rounded-dino text-light" type="button">
+
+                Read More
+              </button>
+            </div>
+          </div>
+          <div class="col-6 d-md-none">
+            <h3 class="fw-bold"> Specifications: </h3>
+              <p>-Dynamic
+              <br>-Closed
+              <br>-Over-ear design
+              <br>-Impedance: 250 Ohms
+              <br>-Sound pressure: 102 dB
+              <br>-3m straight cable</p>
+              <button class="btn rounded-dino text-light bg-red-dino" data-bs-toggle="modal" data-bs-target="#modalSpecifications">See more</button>
+          </div>
+          <div class="col-6 d-flex align-items-center">
+            <img class="card-img-top mb-5 mb-md-0 img-fluid" src="../img/sony_headphones.png" alt="..." />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal fade" id="modalSpecifications" tabindex="-1" aria-labelledby="modalSpecifications"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Fusce sit amet tincidunt nibh. Sed et magna turpis.
+                  Quisque ut ipsum at metus rhturpis.
+                  Etiam imperdiet pretium leo, nec maximus nunc efficitur quis.</p>
+                <p>
+                  Quisque dapibus a erat eu tempus. Sed elementum rhoncus
+                  ex sed pharetra. Nullam rutrum varius interdum.
+                  Phasellus tempor placerat urna. Nulla vel euismod tortor.
+                  Sed vitae egestas lorem. Morbi eros eros, tincidunt eu massa ac,
+                  laoreet posuere ante. Fusce tempus metus felis, a bibendum nunc </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+    <div class="color-product d-flex flex-column align-items-center container mt-5">
+
+      <div>
+        <p class="fs-1 fw-bold">Avilable colors</p>
+      </div>
+
+      <div class="d-none d-md-flex color-cards justify-content-around container-fluid">
+        <div class="color-card">
+          <img src="../img/color1.png" alt="#" class="img-fluid">
+          <p class="text-center fw-bold">WH-CH710N</p>
+          <p class="text-center fw-bold">Black</p>
+        </div>
+        <div class="color-card">
+          <img src="../img/color2.png" alt="#" class="img-fluid">
+          <p class="text-center fw-bold">WH-CH710N</p>
+          <p class="text-center fw-bold">Blue</p>
+        </div>
+        <div class="color-card">
+          <img src="../img/color3.png" alt="#" class="img-fluid">
+          <p class="text-center fw-bold">WH-CH710N</p>
+          <p class="text-center fw-bold">White</p>
+        </div>
+      </div>
+
+      <div class="container-fluid d-md-none">
+        <div id="myCarousel3" class="carousel slide mb-6" data-bs-ride="carousel">
+          <div class="carousel-inner rounded-dino mt-md-5 mt-lg-0">
+            <div class="carousel-item active">
+              <img src="../img/color1.png" alt="#" class="img-fluid">
+            </div>
+            <div class="carousel-item ">
+              <img src="../img/color2.png" alt="#" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/color3.png" alt="#" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+        <div class="container d-flex justify-content-evenly d-md-none mt-3">
+          <button type="button" data-bs-target="#myCarousel3" data-bs-slide-to="0" class="color cn" 
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel3" data-bs-slide-to="1" class="color ca" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel3" data-bs-slide-to="2" class="color cb" aria-label="Slide 3"></button>
+        </div>
+    
+
+    </div>
+
+
+    <div class="container mt-5 d-none d-md-flex justify-content-around">
+      <div class="d-flex ">
+        <img src="../img/box.png" alt="#" class="img-fluid">
+      </div>
+      <div class="d-flex flex-column ">
+        <p class="fw-bold fs-2">What's in the box?</p>
+        <p>Sony WH-CH710N headphones</p>
+        <p>3.5mm cable adapter</p>
+        <p>USB-C charging cable</p>
+        <p>Warranty</p>
+        <p>Reference Guide</p>
+      </div>
+    </div>
+
+    <div class="container d-flex justify-content-around flex-column mt-5">
+      <div class="d-flex flex-column align-items-center mb-4 flex-lg-row justify-content-lg-evenly">
+
+        <div class="d-flex align-items-center m-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+            class="bi bi-volume-mute-fill me-2" viewbox="0 0 16 16">
+            <path
+              d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0" />
+          </svg>
+          <div class="bg-carousel-dino rounded-2 p-2 feature-span d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal" data-bs-target="#modalNoise"><span>Noise cancelling</span> <svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-in-right" viewbox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+              <path fill-rule="evenodd"
+                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg></div>
+        </div>
+
+        <div class="modal fade" id="modalNoise" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalNoiseTitle">Noise cancelling</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                  class="bi bi-volume-mute-fill me-2" viewbox="0 0 16 16">
+                  <path
+                    d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0" />
+                </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Immerse yourself in uninterrupted audio bliss with our noise-canceling technology. Dive into your
+                  favorite tunes or podcasts without any external distractions. Enjoy a serene listening experience
+                  wherever you go.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center m-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+            class="bi bi-battery-full me-2" viewbox="0 0 16 16">
+            <path d="M2 6h10v4H2z" />
+            <path
+              d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8" />
+          </svg>
+          <div class="bg-carousel-dino rounded-2 p-2 feature-span d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal" data-bs-target="#modalBattery"><span>Long lasting battery</span> <svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-in-right" viewbox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+              <path fill-rule="evenodd"
+                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg></div>
+        </div>
+
+        <div class="modal fade" id="modalBattery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalBatteryTitle">Long lasting battery</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                  class="bi bi-battery-full me-2" viewbox="0 0 16 16">
+                  <path d="M2 6h10v4H2z" />
+                  <path
+                    d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8" />
+                </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Never miss a beat with our headphones' long-lasting battery life. Stay connected and enjoy hours of
+                  continuous music playback or calls on a single charge. Keep the music going without interruptions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center m-3 mb-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-tree me-2"
+            viewbox="0 0 16 16">
+            <path
+              d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507" />
+          </svg>
+          <div class="bg-carousel-dino rounded-2 p-2 feature-span d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal" data-bs-target="#modalSust"><span>Sustainability</span> <svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-in-right" viewbox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+              <path fill-rule="evenodd"
+                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg></div>
+        </div>
+
+        <div class="modal fade" id="modalSust" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalSustTitle">Sustainability</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                  class="bi bi-tree me-2" viewbox="0 0 16 16">
+                  <path
+                    d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507" />
+                </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Embrace sustainability without compromising on performance. Our headphones are crafted with
+                  eco-friendly materials, offering both exceptional audio quality and an environmentally conscious
+                  choice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="d-flex flex-column align-items-center mb-4 flex-lg-row justify-content-lg-evenly">
+        <div class="d-flex align-items-center m-3 mt-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+            class="bi bi-telephone-outbound me-2" viewbox="0 0 16 16">
+            <path
+              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5" />
+          </svg>
+          <div class="bg-carousel-dino rounded-2 p-2 feature-span d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal" data-bs-target="#modalCalls"><span>High-quality calls</span> <svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-in-right" viewbox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+              <path fill-rule="evenodd"
+                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg></div>
+        </div>
+
+        <div class="modal fade" id="modalCalls" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalCallsTitle">High-quality calls</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                  class="bi bi-telephone-outbound me-2" viewbox="0 0 16 16">
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5" />
+                </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Experience crystal-clear communication with our headphones' high-quality call features. Enjoy clear
+                  conversations, whether it's a business call or catching up with friends, ensuring every word is heard.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center m-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+            class="bi bi-bluetooth me-2" viewbox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="m8.543 3.948 1.316 1.316L8.543 6.58zm0 8.104 1.316-1.316L8.543 9.42zm-1.41-4.043L4.275 5.133l.827-.827L7.377 6.58V1.128l4.137 4.136L8.787 8.01l2.745 2.745-4.136 4.137V9.42l-2.294 2.274-.827-.827zM7.903 16c3.498 0 5.904-1.655 5.904-8.01 0-6.335-2.406-7.99-5.903-7.99S2 1.655 2 8.01C2 14.344 4.407 16 7.904 16Z" />
+          </svg>
+          <div class="bg-carousel-dino rounded-2 p-2 feature-span d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal" data-bs-target="#modalBluetooth"><span>Bluetooth</span> <svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-in-right" viewbox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+              <path fill-rule="evenodd"
+                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg></div>
+        </div>
+
+        <div class="modal fade" id="modalBluetooth" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalBluetoothTitle">Bluetooth</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                  class="bi bi-bluetooth me-2" viewbox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="m8.543 3.948 1.316 1.316L8.543 6.58zm0 8.104 1.316-1.316L8.543 9.42zm-1.41-4.043L4.275 5.133l.827-.827L7.377 6.58V1.128l4.137 4.136L8.787 8.01l2.745 2.745-4.136 4.137V9.42l-2.294 2.274-.827-.827zM7.903 16c3.498 0 5.904-1.655 5.904-8.01 0-6.335-2.406-7.99-5.903-7.99S2 1.655 2 8.01C2 14.344 4.407 16 7.904 16Z" />
+                </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Seamlessly connect to your devices via Bluetooth and enjoy wireless freedom. Pair effortlessly with
+                  your smartphone, tablet, or laptop for a hassle-free and tangle-free audio experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center m-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+            class="bi bi-broadcast me-2" viewbox="0 0 16 16">
+            <path
+              d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
+          </svg>
+          <div class="bg-carousel-dino rounded-2 p-2 feature-span d-flex justify-content-between align-items-center"
+            data-bs-toggle="modal" data-bs-target="#modalRange"><span>High range</span> <svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-in-right" viewbox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+              <path fill-rule="evenodd"
+                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+            </svg></div>
+        </div>
+
+        <div class="modal fade" id="modalRange" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 me-3" id="modalRangeTitle">High range</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                  class="bi bi-broadcast me-2" viewbox="0 0 16 16">
+                  <path
+                    d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
+                </svg>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Experience audio without limits. Our headphones offer an extended range, allowing you to enjoy your
+                  music or calls with exceptional sound quality, whether you're nearby or moving around.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container mt-5 d-none d-md-block">
+      <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card-wrapper container-sm d-flex   justify-content-around">
+              <div class="related-card card p-3 d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="../img/relacionados/r1.png" class="card-img-top img-fluid" alt="...">
+                <div class="align-self-center">
+                  <p class="fs-3 fw-bold">Sony WH-CH720N</p>
+                </div>
+              </div>
+              <div class="related-card card p-3 d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="../img/relacionados/r2.png" class="card-img-top img-fluid" alt="...">
+                <div class="align-self-center">
+                  <p class="fs-3 fw-bold">JBL LIVE 460NC</p>
+                </div>
+              </div>
+              <div class="related-card card p-3 d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="../img/relacionados/r3.png" class="card-img-top img-fluid" alt="...">
+                <div class="align-self-center">
+                  <p class="fs-3 fw-bold">Anker Q35</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card-wrapper container-sm d-flex  justify-content-around">
+              <div class="related-card card p-3 d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="../img/relacionados/r4.png" class="card-img-top img-fluid" alt="...">
+                <div class="align-self-center">
+                  <p class="fs-4 fw-bold">Sony WH-1000XM5</p>
+                </div>
+              </div>
+              <div class="related-card card p-3 d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="../img/relacionados/r5.png" class="card-img-top img-fluid" alt="...">
+                <div class="align-self-center">
+                  <p class="fs-3 fw-bold">Sony WH-XB910N</p>
+                </div>
+              </div>
+              <div class="related-card card p-3 d-flex flex-column justify-content-between" style="width: 18rem;">
+                <img src="../img/relacionados/r6.png" class="card-img-top img-fluid" alt="...">
+                <div class="align-self-center">
+                  <p class="fs-3 fw-bold">Srhythm NC35</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  
+  </main>
+
+
+
+
+  <footer class="mt-2 mt-sm-5">
+    <div class="footer1 d-flex justify-content-center">
+      <img src="../img/dinotech_black_logo.png" alt="#" class="footer-img">
+    </div>
+
+    <div class="footer2 bg-black text-light">
+      <div class="container d-flex justify-content-between py-4 flex-column flex-sm-row">
+        <section class="d-flex flex-column align-items-center m-3 m-sm-0">
+          <h3>PRODUCT</h3>
+          <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
+            <br> Lorem ipsum <br> Lorem
+            ipsum <br> Lorem ipsum
+          </p>
+        </section>
+        <section class="d-flex flex-column align-items-center m-3 m-sm-0">
+          <h3>COMPANY</h3>
+          <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
+            <br> Lorem ipsum <br> Lorem
+            ipsum <br> Lorem ipsum
+          </p>
+        </section>
+        <section class="d-flex flex-column align-items-center m-3 m-sm-0">
+          <h3>HELP</h3>
+          <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
+            <br> Lorem ipsum <br> Lorem
+            ipsum <br> Lorem ipsum
+          </p>
+        </section>
+        <section class="d-flex flex-column align-items-center m-3 m-sm-0">
+          <h3>ABOUT US</h3>
+          <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
+            <br> Lorem ipsum <br> Lorem
+            ipsum <br> Lorem ipsum
+          </p>
+        </section>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
