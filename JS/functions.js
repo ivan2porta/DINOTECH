@@ -1,3 +1,4 @@
+hidden = true;
 
 function toogleMobileMenu(element) {
     element.classList.toggle("open");
@@ -11,9 +12,12 @@ function displayHide() {
   });
 
   const button = document.getElementById("display-hide");
-  if (button.textContent === "See more brands") {
-      button.textContent = "Hide brands";
-  } else {
-      button.textContent = "See more brands";
+
+  if(hidden == true){
+    hidden = false;
+    button.textContent = "Hide brands";
+  } else{
+    hidden = true;
+    button.textContent = "See more brands"
   }
 }

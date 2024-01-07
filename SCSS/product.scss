@@ -1,0 +1,23 @@
+.color-card {
+    img {
+      width: 12rem;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+  }
+
+  /***/
+.feature-span{
+    min-width: 15rem;
+  }
+  
+  .feature-span:hover{
+    background-color: $grey-hover-dino;
+  }
+  
+  /****/
+  .related-card:hover{
+    background-color: $grey-hover-dino;
+    color: white;
+  }
+  

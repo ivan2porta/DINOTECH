@@ -5,3 +5,12 @@
   .footer1 {
     background-image: linear-gradient(transparent 50%, $red-dino 50%);
   }
+
+  @media (width < 576px) {
+    /* Selector para los títulos */
+    .footer2 h3:hover {
+      /* Transforma el tamaño del texto al hacer hover */
+      transform: scale(1.2);
+      transition: transform 0.3s ease; /* Agrega una transición suave */
+    }
+  }

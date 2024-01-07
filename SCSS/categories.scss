@@ -1,177 +1,39 @@
 main {
-  margin-top: 11vh;
+  margin-top: 7rem;
 }
 
-.categories {
-    margin: auto;
-    display: grid;
-    gap: 2rem;
-    min-width: 100%;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20rem 20rem;
-    grid-template-areas:
-      "earphones smartwatch laptop"
-      "console console smartphone";
+
+.categorie{
+  img{
+    max-height: 15rem;
+    max-width: 10rem;
   }
+}
 
-.earphones {
-    grid-area: earphones;
-    background-image: url("../img/earphones2.png");
-    background-repeat: no-repeat;
-    background-position: 10rem center;
-  }
-
-  .smartwatch {
-    grid-area: smartwatch;
-    background-image: url("../img/smartwatch2.png");
-    background-repeat: no-repeat;
-    background-position: 10rem center;
-  }
-
-  .laptop {
-    grid-area: laptop;
-    background-image: url("../img/laptop2.png");
-    background-repeat: no-repeat;
-    background-position: 9rem center;
-  }
-
-  .console {
-    grid-area: console;
-    background-image: url("../img/console2.png");
-    background-repeat: no-repeat;
-    background-position: 20rem center;
-  }
-
-  .smartphone {
-    grid-area: smartphone;
-    background-image: url("../img/smartphone2.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  
-
-  .category-item {
-    height: 200px;
-  }
-
-  @media (width < 1200px){
-    .earphones,
-    .smartwatch {
-      background-position: 9rem center;
-    }
-
-    .laptop {
-      background-position: 9rem center;
-    }
-
-    .console {
-      background-position: 17rem center;
-      background-size: 40% 70%;
-    }
-
-    .smartphone {
-      background-position: 5rem -1rem;
-      background-size: 80% 100%;
+@media (width < 1400px){
+  .categorie{
+    img{
+      max-width: 7rem;
     }
   }
+}
 
-  @media (width < 992px) {
+@media (width < 1200px){
+  main {
+    margin-top: 8rem;
+  }
+}
 
-    main {
-      margin-top: 8rem;
-    }
-
-    .categories {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .earphones,
-    .laptop,
-    .console,
-    .smartphone,
-    .smartwatch {
-      padding: 2rem;
-    }
-
-    .earphones,
-    .smartwatch {
-      background-position: 17rem center;
-    }
-
-    .laptop {
-      background-position: 15rem center;
-    }
-
-    .console {
-      background-position: 17rem center;
-      background-size: 35% 70%;
-    }
-
-    .smartphone {
-      background-position: 10rem -1rem;
-      background-size: 50% 100%;
+@media (width < 768px){
+  main {
+    margin-top: 3rem;
+  }
+}
+@media (width < 576px){
+  .categorie{
+    img{
+      max-height: 8rem;
+      max-width: 7rem;
     }
   }
-
-  @media (width < 576px) {
-
-    main {
-      margin-top: 3rem;
-    }
-
-    .categories {
-      display: grid;
-      gap: 0.5rem;
-      max-width: 200px;
-      justify-content: center;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 10rem 10rem 10rem;
-      grid-template-areas:
-        "earphones smartwatch"
-        "laptop smartphone"
-        "console console";
-    }
-
-    .earphones,
-    .laptop,
-    .console,
-    .smartphone,
-    .smartwatch {
-      padding: 0;
-    }
-
-    .earphones,
-    .smartwatch,
-    .laptop {
-      background-position: center;
-      background-size: 50% 70%;
-    }
-
-    .console {
-      background-position: 12rem center;
-      background-size: 35% 70%;
-    }
-
-    .smartphone {
-      background-position: center -1rem;
-      background-size: 100% 100%;
-    }
-  }
-
-  @media (width < 406px){
-
-    main {
-      margin-top: 8vh;
-    }
-
-    .category-title{
-      display: none;
-    }
-
-    .earphones, .smartphone, .smartwatch, .console, .laptop{
-      background-position: center
-    }
-  }
+}

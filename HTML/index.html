@@ -155,15 +155,12 @@
     <main class=" d-flex flex-column align-items-center">
       <div class="container-fluid">
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-          <div class="carousel-indicators">
+          <div class="carousel-indicators d-none d-xl-flex">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
               aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-
-
-
           <div class="carousel-inner rounded-dino mt-md-5 mt-lg-0">
             <div class="carousel-item active bg-carousel-dino">
               <div class="row">
@@ -174,7 +171,7 @@
                   <p class="carousel-h mb-0">HEADPHONES</p>
                   </p>
                   <div class="mb-3 d-flex justify-content-center">
-                    <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="#">See more </a>
+                    <a class="btn btn-lg bg-red-dino text-light rounded-pill" href="./product.html">See more </a>
                   </div>
                 </div>
                 <div class="col-4">
@@ -225,62 +222,56 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">siguiente</span>
           </button>
-          <div id="myCarouselPhone" class="carousel slide" data-bs-ride="carousel" style="z-index: 3;">
-            <span data-bs-target="#myCarousel" data-bs-slide-to="0" class="indicator active"></span>
-            <span data-bs-target="#myCarousel" data-bs-slide-to="1" class="indicator"></span>
-            <span data-bs-target="#myCarousel" data-bs-slide-to="2" class="indicator"></span>
-          </div>
         </div>
       </div>
 
       <div class="container brands fw-bold mt-3 d-md-none">
-        <div class="d-flex justify-content-between mb-2">
-          <div class="col-auto"><span>Choose your brand</span></div>
+        <div class="d-flex justify-content-end mb-2">
           <div class="col-auto"><span class="text-secondary" id="display-hide" onclick="displayHide()">See more
               brands</span></div>
         </div>
 
-        <div class="d-flex justify-content-evenly">
+        <div class="d-flex container justify-content-evenly">
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/beats.png" alt="#">
+            <img src="../img/brands/beats.png" alt="#" class="img-fluid">
             <span class="fw-bold">Beats</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/jbl.png" alt="#">
+            <img src="../img/brands/jbl.png" alt="#" class="img-fluid">
             <span class="fw-bold">JBL</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/apple.png" alt="#">
+            <img src="../img/brands/apple.png" alt="#" class="img-fluid">
             <span class="fw-bold">Apple</span>
           </div>
         </div>
 
-        <div class="brands-div d-none justify-content-evenly">
+        <div class="brands-div container d-none justify-content-evenly">
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/asus.png" alt="#">
+            <img src="../img/brands/asus.png" alt="#" class="img-fluid">
             <span class="fw-bold">Asus</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/google.png" alt="#">
+            <img src="../img/brands/google.png" alt="#" class="img-fluid">
             <span class="fw-bold">Google</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/samsung.png" alt="#">
+            <img src="../img/brands/samsung.png" alt="#" class="img-fluid">
             <span class="fw-bold">Samsung</span>
           </div>
         </div>
 
-        <div class="brands-div d-none justify-content-evenly">
+        <div class="brands-div container d-none justify-content-evenly">
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/xiaomi.png" alt="#">
+            <img src="../img/brands/xiaomi.png" alt="#" class="img-fluid">
             <span class="fw-bold">Xiaomi</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/hp.png" alt="#">
+            <img src="../img/brands/hp.png" alt="#" class="img-fluid">
             <span class="fw-bold">HP</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/sony.png" alt="#">
+            <img src="../img/brands/sony.png" alt="#" class="img-fluid">
             <span class="fw-bold">Sony</span>
           </div>
         </div>
@@ -289,72 +280,71 @@
       </div>
 
 
-      <div class="categories  mt-4">
+      <div class="container mt-4">
+        <p class="h2 text-center d-md-none">Choose your section</p>
 
-        <div
-          class="earphones bg-earphones-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
-          <div class="container text-light d-flex  flex-column justify-content-end align-items-xs-center ms-sm-4">
-            <p>
-              <span class="fs-3 d-none d-sm-block">Enjoy</span><br>
-              <span class="fs-1 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="fs-3 category-title"><strong>EARPHONES</strong></span>
-            </p>
-            <a class="btn btn-lg bg-red-dino text-light rounded-pill align-self-start d-none d-sm-block"
-              href="#">Browse</a>
+        <div class="d-flex justify-content-evenly container-fluid flex-wrap">
+          <div class="col-6 col-md-12 col-xl-4 categorie order-xl-1">
+            <div class="bg-grey-dino rounded-dino m-1 p-2 d-flex flex-column flex-md-row justify-content-around">
+              <div class="text-start align-self-center">
+                <p class="text-light d-none d-md-block fs-4">Enjoy</p>
+                <p class="text-light d-none d-md-block fs-3 fw-bold">With</p>
+                <p class="text-secondary  d-none d-md-block fs-2 fw-bold">EARPHONES</p>
+                <p class="text-light fw-bold d-md-none">EARPHONES</p>
+              </div>
+              <img src="../img/earphones2.png" alt="#" class="img-fluid menu-img zn-1 align-self-center align-self-md-start">
+            </div>
           </div>
-        </div>
+          
+          <div class="col-6 col-md-12 col-xl-4 categorie order-xl-1">
+            <div class="bg-yellow-dino rounded-dino m-1 p-2 d-flex flex-column flex-md-row justify-content-around">
+              <div class="text-start align-self-center">
+                <p class="text-light d-none d-md-block fs-4">Smart</p>
+                <p class="text-light d-none d-md-block fs-3 fw-bold">With</p>
+                <p class="text-dark  d-none d-md-block fs-2 fw-bold">SMARTWATCH</p>
+                <p class="text-dark fw-bold d-md-none">SMARTWATCH</p>
+              </div>
+              <img src="../img/smartwatch2.png" alt="#" class="img-fluid menu-img zn-1 align-self-center align-self-md-start">
+            </div>
+          </div>
 
-        <div
-          class="smartwatch bg-smartwatch-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
-          <div class="container text-light d-flex flex-column justify-content-end align-items-xs-center ms-sm-4">
-            <p>
-              <span class="fs-3 d-none d-sm-block">Smart</span><br>
-              <span class="fs-2 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="text-light fs-3 category-title"><strong>SMARTWATCH</strong></span>
-            </p>
-            <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
-              href="#">Browse</a>
-          </div>
-        </div>
+          <div class="col-6 col-md-12 col-xl-4 categorie order-xl-1">
+            <div class="bg-red-dino rounded-dino m-1 p-2 d-flex flex-column flex-md-row justify-content-around">
+              <div class="text-start align-self-center">
+                <p class="text-light d-none d-md-block fs-4">Power</p>
+                <p class="text-light d-none d-md-block fs-3 fw-bold">With</p>
+                <p class="text-dark d-none d-md-block fs-2 fw-bold">LAPTOPS</p>
+                <p class="text-dark fw-bold d-md-none">LAPTOPS</p>
 
-        <div
-          class="laptop bg-red-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
-          <div class="container text-light d-flex  flex-column justify-content-end align-items-xs-center ms-sm-4">
-            <p>
-              <span class="fs-3 d-none d-sm-block">Power</span><br>
-              <span class="fs-1 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="text-dark-emphasis fs-3 category-title"><strong>LAPTOPS</strong></span>
-            </p>
-            <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
-              href="#">Browse</a>
+              </div>
+              <img src="../img/laptop2.png" alt="#" class="img-fluid menu-img zn-1 align-self-center align-self-md-start">
+            </div>
           </div>
-        </div>
 
-        <div
-          class="console bg-carousel-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
-          <div class="container text-light d-flex  flex-column justify-content-end align-items-xs-center ms-sm-4">
-            <p>
-              <span class="text-black fs-3 d-none d-sm-block">Game on</span><br>
-              <span class="text-black fs-1 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="text-light fs-1 category-title"><strong>CONSOLES</strong></span>
-            </p>
-            <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
-              href="#">Browse</a>
+          <div class="col-6 col-md-12 col-xl-4 categorie order-xl-3">
+            <div class="bg-green-dino rounded-dino m-1 p-2 d-flex flex-column flex-md-row justify-content-around">
+              <div class="text-start align-self-center">
+                <p class="text-light d-none d-md-block fs-4">Contact</p>
+                <p class="text-light d-none d-md-block fs-3 fw-bold">With</p>
+                <p class="text-dark d-none d-md-block fs-2 fw-bold">PHONES</p>
+                <p class="text-dark fw-bold d-md-none">PHONES</p>
+              </div>
+              <img src="../img/smartphone2.png" alt="#" class="img-fluid menu-img zn-1 align-self-center align-self-md-start">
+            </div>
           </div>
-        </div>
 
-        <div
-          class="smartphone bg-phones-dino rounded-dino d-flex flex-column align-items-start justify-content-end justify-content-sm-center">
-          <div class="container text-light d-flex  flex-column justify-content-end align-items-xs-center ms-sm-4">
-            <p>
-              <span class="text-light fs-3 d-none d-sm-block">Contact</span><br>
-              <span class="text-light fs-1 d-none d-sm-block"><strong>With</strong></span><br>
-              <span class="text-black fs-3 category-title"><strong>PHONES</strong></span>
-            </p>
-            <a class="btn btn-lg bg-light text-black rounded-pill align-self-start d-none d-sm-block"
-              href="#">Browse</a>
+          <div class="col-12 col-md-12 col-xl-8 categorie order-xl-2">
+            <div class="bg-carousel-dino rounded-dino m-1 p-2 d-flex flex-column flex-md-row justify-content-around">
+              <div class="text-start align-self-center">
+                <p class="text-dark d-none d-md-block fs-4">Game on</p>
+                <p class="text-dark d-none d-md-block fs-3 fw-bold">With</p>
+                <p class="text-light d-none d-md-block fs-2 fw-bold">CONSOLES</p>
+                <p class="text-dark fw-bold d-md-none">CONSOLES</p>
+              </div>
+              <img src="../img/console2.png" alt="#" class="img-fluid menu-img zn-1 align-self-center align-self-md-start">
+            </div>
           </div>
-        </div>
+
       </div>
 
       <div class="icons d-none d-sm-flex mt-5 justify-content-evenly">
@@ -500,7 +490,7 @@
           </div>
         </div>
       </div>
-
+      </div>
     </main>
   </div>
 
@@ -512,28 +502,28 @@
     <div class="footer2 bg-black text-light">
       <div class="container d-flex justify-content-between py-4 flex-column flex-sm-row">
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3>PRODUCT</h3>
+          <h3 class="footer-title">PRODUCT</h3>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3>COMPANY</h3>
+          <h3 class="footer-title">COMPANY</h3>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3>HELP</h3>
+          <h3 class="footer-title">HELP</h3>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3>ABOUT US</h3>
+          <h3 class="footer-title">ABOUT US</h3>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum

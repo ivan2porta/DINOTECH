@@ -28,6 +28,29 @@
     opacity: 80%;
   }
 
+  #myCarousel3>.carousel-inner>.carousel-item{
+
+    justify-content: center;
+    img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-height: 20rem;
+    }
+  }
+  
+  .color{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid 1px black;
+  }
+  
+  .cb{background-color: white;}
+  .cn{background-color: black;}
+  .ca{background-color: #08005e;}
+  
+
   @media (width < 1200px) {
     .carousel-h {
       font-size: 6vh;

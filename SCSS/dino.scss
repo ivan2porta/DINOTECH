@@ -6,6 +6,7 @@
 @import 'footer';
 @import 'header';
 @import 'searchbar';
+@import 'product';
 
 * {
     box-sizing: border-box;
@@ -19,15 +20,15 @@
     background-color: $grey-carousel-dino;
   }
   
-  .bg-earphones-dino {
+  .bg-grey-dino {
     background-color: $darck-grey-dino;
   }
   
-  .bg-smartwatch-dino {
+  .bg-yellow-dino {
     background-color: $yellow-dino;
   }
   
-  .bg-phones-dino {
+  .bg-green-dino {
     background-color: $green-dino;
   }
   
@@ -41,7 +42,7 @@
   }
   
   .icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: 1s; 
   }
   
