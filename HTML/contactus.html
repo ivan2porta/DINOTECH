@@ -34,7 +34,8 @@
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <ul
           class="nav col-9 col-lg-auto me-lg-auto mb-2 justify-content-start align-items-center mb-md-0 d-none d-md-flex">
-          <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px"></h1>
+          <audio id="player" src="../audio/roar.ogg"></audio>
+          <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px" onclick="document.getElementById('player').play()"></h1>
           <li><a href="./index.html" class="nav-link px-2 fs-5 text-black">Home</a></li>
           <li><a href="#" class="nav-link px-2 fs-5 text-black">Categories</a></li>
           <li><a href="#" class="nav-link px-2 fs-5 text-black">About Us</a></li>
@@ -47,7 +48,7 @@
           <form action="#" method="get">
             <input class="search expandright" id="searchright" type="search" name="q" placeholder="Search">
             <label class="button searchbutton" for="searchright">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                 class="bi bi-search search-icon icon" viewbox="0 0 16 16">
                 <path
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -58,7 +59,7 @@
 
         <div class="text-end">
           <button type="button" class="btn d-lg-none" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
               class="bi bi-search search-icon icon" viewbox="0 0 16 16">
               <path
                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -84,7 +85,7 @@
     </nav>
   </header>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -326,28 +327,28 @@
       <div class="footer2 bg-black text-light">
         <div class="container d-flex justify-content-between py-4 flex-column flex-sm-row">
           <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-            <h3 class="footer-title">PRODUCT</h3>
+            <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">PRODUCT</h3></a>
             <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
               <br> Lorem ipsum <br> Lorem
               ipsum <br> Lorem ipsum
             </p>
           </section>
           <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-            <h3 class="footer-title">COMPANY</h3>
+            <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">COMPANY</h3></a>
             <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
               <br> Lorem ipsum <br> Lorem
               ipsum <br> Lorem ipsum
             </p>
           </section>
           <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-            <h3 class="footer-title">HELP</h3>
+            <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">HELP</h3></a>
             <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
               <br> Lorem ipsum <br> Lorem
               ipsum <br> Lorem ipsum
             </p>
           </section>
           <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-            <h3 class="footer-title">ABOUT US</h3>
+            <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">ABOUT US</h3></a>
             <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
               <br> Lorem ipsum <br> Lorem
               ipsum <br> Lorem ipsum

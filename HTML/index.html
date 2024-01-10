@@ -37,7 +37,8 @@
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <ul
           class="nav col-9 col-lg-auto me-lg-auto mb-2 justify-content-start align-items-center mb-md-0 d-none d-md-flex">
-          <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px"></h1>
+          <audio id="player" src="../audio/roar.ogg"></audio>
+          <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px" onclick="document.getElementById('player').play()"></h1>
           <li><a href="./index.html" class="nav-link px-2 fs-5 text-black">Home</a></li>
           <li><a href="#" class="nav-link px-2 fs-5 text-black">Categories</a></li>
           <li><a href="#" class="nav-link px-2 fs-5 text-black">About Us</a></li>
@@ -87,7 +88,7 @@
     </nav>
   </header>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -238,45 +239,45 @@
 
         <div class="d-flex container justify-content-evenly">
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/beats.png" alt="#" class="img-fluid">
+            <a href="#"><img src="../img/brands/beats.png" alt="#" class="img-fluid"></a>
             <span class="fw-bold">Beats</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/jbl.png" alt="#" class="img-fluid">
+            <a href="#"> <img src="../img/brands/jbl.png" alt="#" class="img-fluid"> </a>
             <span class="fw-bold">JBL</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/apple.png" alt="#" class="img-fluid">
+            <a href="#"><img src="../img/brands/apple.png" alt="#" class="img-fluid"></a>
             <span class="fw-bold">Apple</span>
           </div>
         </div>
 
         <div class="brands-div container d-none justify-content-evenly">
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/asus.png" alt="#" class="img-fluid">
+            <a href="#"><img src="../img/brands/asus.png" alt="#" class="img-fluid"></a>
             <span class="fw-bold">Asus</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/google.png" alt="#" class="img-fluid">
+            <a href="#"><img src="../img/brands/google.png" alt="#" class="img-fluid"></a>
             <span class="fw-bold">Google</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/samsung.png" alt="#" class="img-fluid">
+            <a href="#"><img src="../img/brands/samsung.png" alt="#" class="img-fluid"></a>
             <span class="fw-bold">Samsung</span>
           </div>
         </div>
 
         <div class="brands-div container d-none justify-content-evenly">
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/xiaomi.png" alt="#" class="img-fluid">
+            <a href="#"><img src="../img/brands/xiaomi.png" alt="#" class="img-fluid"></a>
             <span class="fw-bold">Xiaomi</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/hp.png" alt="#" class="img-fluid">
+            <a href="#"><img src="../img/brands/hp.png" alt="#" class="img-fluid"></a>
             <span class="fw-bold">HP</span>
           </div>
           <div class="col-4 rounded-dino bg-carousel-dino d-flex flex-column align-items-center p-1 m-1">
-            <img src="../img/brands/sony.png" alt="#" class="img-fluid">
+            <a href="#"><img src="../img/brands/sony.png" alt="#" class="img-fluid"></a>
             <span class="fw-bold">Sony</span>
           </div>
         </div>
@@ -365,7 +366,7 @@
         </div>
 
         <div class="modal fade" id="modalFreeShipping" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
+          aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -399,7 +400,7 @@
         </div>
 
         <div class="modal fade" id="modalEasyRefund" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
+          aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -434,7 +435,7 @@
         </div>
 
         <div class="modal fade" id="modalSafePayment" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
+          aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -470,7 +471,7 @@
         </div>
       </div>
 
-      <div class="modal fade" id="modalGuarantee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="modalGuarantee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -507,28 +508,28 @@
     <div class="footer2 bg-black text-light">
       <div class="container d-flex justify-content-between py-4 flex-column flex-sm-row">
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3 class="footer-title">PRODUCT</h3>
+          <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">PRODUCT</h3></a>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3 class="footer-title">COMPANY</h3>
+          <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">COMPANY</h3></a>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3 class="footer-title">HELP</h3>
+          <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">HELP</h3></a>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3 class="footer-title">ABOUT US</h3>
+          <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">ABOUT US</h3></a>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum

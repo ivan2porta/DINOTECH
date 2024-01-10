@@ -45,7 +45,8 @@
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <ul
           class="nav col-9 col-lg-auto me-lg-auto mb-2 justify-content-start align-items-center mb-md-0 d-none d-md-flex">
-          <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px"></h1>
+          <audio id="player" src="../audio/roar.ogg"></audio>
+          <h1><img src="../img/dinotech_red_logo.png" alt="" width="80px" height="80px" onclick="document.getElementById('player').play()"></h1>
           <li><a href="./index.html" class="nav-link px-2 fs-5 text-black">Home</a></li>
           <li><a href="#" class="nav-link px-2 fs-5 text-black">Categories</a></li>
           <li><a href="#" class="nav-link px-2 fs-5 text-black">About Us</a></li>
@@ -95,7 +96,7 @@
     </nav>
   </header>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -181,11 +182,11 @@
       </div>
     </div>
 
-    <!-- Product section-->
+ 
     <section>
       <div class="container px-4 px-lg-5">
         <div class="row flex-column flex-xl-row gx-lg-5 align-items-start mt-5 align-items-stretch">
-          <div class="col-lg-6 d-flex flex-column justify-content-evenly d-none d-md-block">
+          <div class="col-xl-6 d-flex flex-column justify-content-evenly d-none d-md-block">
 
             <h1 class="display-5 fw-bolder">Product Information</h1>
             <div class="fs-5">
@@ -201,13 +202,33 @@
               Sed vitae egestas lorem. Morbi eros eros, tincidunt eu massa ac,
               laoreet posuere ante. Fusce tempus metus felis, a bibendum nunc </p>
             <div class="d-flex">
-              <button class="btn bg-red-dino rounded-dino text-light" type="button">
-
+              <button class="btn bg-red-dino rounded-dino text-light" type="button" data-bs-toggle="modal" data-bs-target="#modalFeatures">
                 Read More
               </button>
+
+              <div class="modal fade" id="modalFeatures" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 me-3" id="modalFeaturesTitle">Specifications:</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>-Dynamic
+                        <br>-Closed
+                        <br>-Over-ear design
+                        <br>-Impedance: 250 Ohms
+                        <br>-Sound pressure: 102 dB
+                        <br>-3m straight cable
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
-          <div class="col-12 col-lg-6 d-md-none">
+          <div class="col-12 col-xl-6 d-md-none">
             <h3 class="fw-bold"> Specifications: </h3>
             <p>-Dynamic
               <br>-Closed
@@ -219,7 +240,7 @@
             <button class="btn rounded-dino text-light bg-red-dino" data-bs-toggle="modal"
               data-bs-target="#modalSpecifications">See more</button>
           </div>
-          <div class="col-12 col-lg-6 d-flex align-items-center mt-5 mt-xl-0 justify-content-center">
+          <div class="col-12 col-xl-6 d-flex align-items-center mt-5 mt-xl-0 justify-content-center">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/71Rv8BRpyrM?si=dxKFYYWzyezVdd1l"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -230,7 +251,7 @@
       </div>
 
       <div class="modal fade" id="modalSpecifications" tabindex="-1" aria-labelledby="modalSpecifications"
-        aria-hidden="true">
+        aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -278,7 +299,7 @@
       </div>
 
       <div class="container-fluid d-md-none">
-        <div id="myCarousel3" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div id="myCarousel3" class="carousel slide mb-6">
           <div class="carousel-inner rounded-dino mt-md-5 mt-lg-0">
             <div class="carousel-item active">
               <img src="../img/color1.png" alt="#" class="img-fluid">
@@ -292,6 +313,7 @@
           </div>
         </div>
       </div>
+      
 
 
       <div class="container d-flex justify-content-evenly d-md-none mt-3">
@@ -341,7 +363,7 @@
             </svg></div>
         </div>
 
-        <div class="modal fade" id="modalNoise" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalNoise" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -380,7 +402,7 @@
             </svg></div>
         </div>
 
-        <div class="modal fade" id="modalBattery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalBattery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -418,7 +440,7 @@
             </svg></div>
         </div>
 
-        <div class="modal fade" id="modalSust" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalSust" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -459,7 +481,7 @@
             </svg></div>
         </div>
 
-        <div class="modal fade" id="modalCalls" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalCalls" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -498,7 +520,7 @@
         </div>
 
         <div class="modal fade" id="modalBluetooth" tabindex="-1" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
+          aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -520,7 +542,7 @@
 
         <div class="d-flex align-items-center m-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-            class="bi bi-broadcast me-2" viewbox="0 0 16 16">
+            class="bi bi-broadcast me-2" viewbox="0 0 16 16"  data-bs-backdrop="static" data-bs-keyboard="false">
             <path
               d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
           </svg>
@@ -535,7 +557,8 @@
             </svg></div>
         </div>
 
-        <div class="modal fade" id="modalRange" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalRange" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -634,28 +657,28 @@
     <div class="footer2 bg-black text-light">
       <div class="container d-flex justify-content-between py-4 flex-column flex-sm-row">
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3 class="footer-title">PRODUCT</h3>
+          <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">PRODUCT</h3></a>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3 class="footer-title">COMPANY</h3>
+          <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">COMPANY</h3></a>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3 class="footer-title">HELP</h3>
+          <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">HELP</h3></a>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
           </p>
         </section>
         <section class="d-flex flex-column align-items-center m-3 m-sm-0">
-          <h3 class="footer-title">ABOUT US</h3>
+          <a href="#" class="text-decoration-none text-light"><h3 class="footer-title">ABOUT US</h3></a>
           <p class="d-none d-sm-block ">Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum <br> Lorem ipsum
             <br> Lorem ipsum <br> Lorem
             ipsum <br> Lorem ipsum
